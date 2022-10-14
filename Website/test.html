@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+.an{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+.hello{
+    width:100px;
+    height:100px;
+    background-color: red;
+}
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: yellow;}
+}
+</style>
+<script>
+     var counter = -1;
+    function update(){
+        var skills = ['HTML','CSS','JAVA']
+        if(counter > skills.length-2){
+            counter = 0;
+        }
+        ++counter;
+        console.log(counter);
+        document.getElementById('go').innerHTML = skills[counter];
+        
+    }
+</script>
+</head>
+<body>
+
+<h1>CSS Animation</h1>
+
+<div class = "an">
+   
+    </div>
+
+<p><b>Note:</b> When an animation is finished, it goes back to its original style.</p>
+<div class = "hello">
+    <button class = "he" onclick="update()"> Click Here</button>
+</div>
+<p id ="go"> 0 </p>
+
+
+
+</body>
+</html>
